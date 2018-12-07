@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="MysqlContext" targetRuntime="MyBatis3" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+        <commentGenerator type="com.zjx.opensource.codegenerator.mbg.CodegenCommentGenerator">
+            <!--使用@mbggenerated保证再次生成的代码不会覆盖自己定义的代码-->
+            <property name="suppressAllComments" value="false"/>
+            <property name="suppressDate" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/test"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.zjx.opensource.codetemplate.model" targetProject="code-template\src\main\java">
+            <property name="trimStrings" value="false" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="mapper"  targetProject="code-template\src\main\resources"/>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codetemplate.mapper"  targetProject="code-template\src\main\java"/>
+
+        <table tableName="code_gen_test">
+            <generatedKey identity="true" column="id" sqlStatement="Mysql"/>
+        </table>
+    </context>
+</generatorConfiguration>
