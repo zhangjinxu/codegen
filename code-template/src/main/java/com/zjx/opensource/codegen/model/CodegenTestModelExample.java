@@ -1,4 +1,4 @@
-package com.zjx.opensource.codetemplate.model;
+package com.zjx.opensource.codegen.model;
 
 import java.util.ArrayList;
 import java.util.List;

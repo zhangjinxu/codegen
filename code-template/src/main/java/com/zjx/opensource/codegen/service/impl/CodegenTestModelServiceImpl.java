@@ -1,8 +1,10 @@
-package com.zjx.opensource.codetemplate.service.impl;
+package com.zjx.opensource.codegen.service.impl;
 
-import com.zjx.opensource.codetemplate.mapper.CodegenTestModelMapper;
-import com.zjx.opensource.codetemplate.model.CodegenTestModel;
-import com.zjx.opensource.codetemplate.service.CodegenTestModelService;
+import com.github.pagehelper.PageHelper;
+import com.zjx.opensource.codegen.mapper.CodegenTestModelMapper;
+import com.zjx.opensource.codegen.model.CodegenTestModel;
+import com.zjx.opensource.codegen.model.CodegenTestModelExample;
+import com.zjx.opensource.codegen.service.CodegenTestModelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,7 +47,14 @@ public class CodegenTestModelServiceImpl implements CodegenTestModelService {
 
     @Override
     public List<CodegenTestModel> listCodegenTestModels(int pageNum, CodegenTestModel model) {
-
-        return null;
+        if (pageNum <= 0) {
+            return null;
+        }
+        PageHelper.startPage(pageNum, 10);
+        if (model == null) {
+            return codegenTestModelMapper.selectByExample(new CodegenTestModelExample());
+        }
+        return codegenTestModelMapper.selectByExample(model.toExample());
     }
+
 }

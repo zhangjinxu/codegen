@@ -10,8 +10,8 @@
 
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 
-        <commentGenerator type="com.zjx.opensource.codegenerator.mbg.CodegenCommentGenerator">
-            <!--使用@mbggenerated保证再次生成的代码不会覆盖自己定义的代码-->
+        <commentGenerator type="com.zjx.opensource.codegen.mbg.CodegenCommentGenerator">
+            <!--eclipse插件使用@mbggenerated保证再次生成的代码不会覆盖自己定义的代码-->
             <property name="suppressAllComments" value="false"/>
             <property name="suppressDate" value="true"/>
             <property name="addRemarkComments" value="true"/>
@@ -25,13 +25,13 @@
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.zjx.opensource.codetemplate.model" targetProject="code-template\src\main\java">
+        <javaModelGenerator targetPackage="com.zjx.opensource.codegen.model" targetProject="code-template\src\main\java">
             <property name="trimStrings" value="false" />
         </javaModelGenerator>
 
         <sqlMapGenerator targetPackage="mapper"  targetProject="code-template\src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codetemplate.mapper"  targetProject="code-template\src\main\java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codegen.mapper" targetProject="code-template\src\main\java"/>
 
         <table tableName="codegen_test_model">
             <generatedKey identity="true" column="id" sqlStatement="Mysql"/>

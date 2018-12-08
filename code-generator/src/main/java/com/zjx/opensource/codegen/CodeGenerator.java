@@ -1,6 +1,6 @@
-package com.zjx.opensource.codegenerator;
+package com.zjx.opensource.codegen;
 
-import com.zjx.opensource.codegenerator.mbg.MBGGenerator;
+import com.zjx.opensource.codegen.mbg.MBGGenerator;
 
 public class CodeGenerator {
 

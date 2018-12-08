@@ -1,4 +1,4 @@
-package com.zjx.opensource.codegenerator;
+package com.zjx.opensource.codegen;
 
 import org.junit.Test;
 

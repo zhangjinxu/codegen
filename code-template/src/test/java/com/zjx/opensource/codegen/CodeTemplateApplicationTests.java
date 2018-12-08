@@ -1,4 +1,4 @@
-package com.zjx.opensource.codetemplate;
+package com.zjx.opensource.codegen;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

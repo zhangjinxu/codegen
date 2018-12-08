@@ -1,4 +1,4 @@
-package com.zjx.opensource.codegenerator.mbg;
+package com.zjx.opensource.codegen.mbg;
 
 import org.mybatis.generator.api.CommentGenerator;
 import org.mybatis.generator.api.IntrospectedColumn;

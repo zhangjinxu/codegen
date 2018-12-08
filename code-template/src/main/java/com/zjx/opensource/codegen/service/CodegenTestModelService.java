@@ -1,6 +1,6 @@
-package com.zjx.opensource.codetemplate.service;
+package com.zjx.opensource.codegen.service;
 
-import com.zjx.opensource.codetemplate.model.CodegenTestModel;
+import com.zjx.opensource.codegen.model.CodegenTestModel;
 
 import java.util.List;
 

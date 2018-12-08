@@ -1,4 +1,4 @@
-package com.zjx.opensource.codetemplate.model;
+package com.zjx.opensource.codegen.model;
 
 import java.io.Serializable;
 
@@ -121,5 +121,24 @@ public class CodegenTestModel implements Serializable {
      */
     public void setType(String type) {
         this.type = type;
+    }
+
+
+    public CodegenTestModelExample toExample() {
+        CodegenTestModelExample example = new CodegenTestModelExample();
+        CodegenTestModelExample.Criteria criteria = example.createCriteria();
+        if (getId() != null) {
+            criteria.andIdEqualTo(getId());
+        }
+        if (getPassword() != null) {
+            criteria.andPasswordEqualTo(getPassword());
+        }
+        if (getType() != null) {
+            criteria.andTypeEqualTo(getType());
+        }
+        if (getUsername() != null) {
+            criteria.andUsernameEqualTo(getUsername());
+        }
+        return example;
     }
 }

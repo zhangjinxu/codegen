@@ -1,7 +1,7 @@
-package com.zjx.opensource.codetemplate.mapper;
+package com.zjx.opensource.codegen.mapper;
 
-import com.zjx.opensource.codetemplate.model.CodegenTestModel;
-import com.zjx.opensource.codetemplate.model.CodegenTestModelExample;
+import com.zjx.opensource.codegen.model.CodegenTestModel;
+import com.zjx.opensource.codegen.model.CodegenTestModelExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
