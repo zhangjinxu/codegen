@@ -8,18 +8,19 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
-@ResponseBody
 public class WebExceptionHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(WebExceptionHandler.class);
 
     @ExceptionHandler(ServiceException.class)
+    @ResponseBody
     public ResponseResult handleServiceException(ServiceException e) {
         return ResponseResult.getFailResult(e.getMessage());
     }
 
-    @ExceptionHandler(Throwable.class)
+    /*@ExceptionHandler(Throwable.class)
+    @ResponseBody
     public ResponseResult handleThrowable(Throwable t) {
         return ResponseResult.getFailResult();
-    }
+    }*/
 }
