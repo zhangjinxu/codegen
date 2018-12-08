@@ -22,6 +22,10 @@ public class ResponseResult implements Serializable {
         return new ResponseResult(0, "fail", "");
     }
 
+    public static ResponseResult getFailResult(String errorMsg) {
+        return new ResponseResult(1000, errorMsg, "");
+    }
+
     public static ResponseResult getFailResult(Object data) {
         return new ResponseResult(0, "fail", data);
     }
