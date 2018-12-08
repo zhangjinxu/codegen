@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -48,7 +49,7 @@ public class CodegenTestModelServiceImpl implements CodegenTestModelService {
     @Override
     public List<CodegenTestModel> listCodegenTestModels(int pageNum, CodegenTestModel model) {
         if (pageNum <= 0) {
-            return null;
+            return new ArrayList<>(0);
         }
         PageHelper.startPage(pageNum, 10);
         if (model == null) {
