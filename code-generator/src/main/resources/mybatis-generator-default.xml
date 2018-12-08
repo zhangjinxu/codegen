@@ -22,6 +22,7 @@
                         connectionURL="jdbc:mysql://localhost:3306/test"
                         userId="root"
                         password="root">
+            <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
 
         <javaModelGenerator targetPackage="com.zjx.opensource.codetemplate.model" targetProject="code-template\src\main\java">

@@ -5,7 +5,7 @@
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    <result column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
     <result column="type" jdbcType="CHAR" property="type" />
@@ -97,6 +97,22 @@
       order by ${orderByClause}
     </if>
   </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--
+    @mbg.generated eclipse插件识别是否覆盖的注解 
+    -->
+    select 
+    <include refid="Base_Column_List" />
+    from codegen_test_model
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--
+    @mbg.generated eclipse插件识别是否覆盖的注解 
+    -->
+    delete from codegen_test_model
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
   <delete id="deleteByExample" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModelExample">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
@@ -193,5 +209,33 @@
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModel">
+    <!--
+    @mbg.generated eclipse插件识别是否覆盖的注解 
+    -->
+    update codegen_test_model
+    <set>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null">
+        type = #{type,jdbcType=CHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModel">
+    <!--
+    @mbg.generated eclipse插件识别是否覆盖的注解 
+    -->
+    update codegen_test_model
+    set username = #{username,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR},
+      type = #{type,jdbcType=CHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

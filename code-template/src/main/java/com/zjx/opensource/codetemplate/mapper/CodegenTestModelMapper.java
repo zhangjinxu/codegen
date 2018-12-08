@@ -19,6 +19,11 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
+    int deleteByPrimaryKey(Integer id);
+
+    /**
+     * @mbg.generated eclipse插件识别是否覆盖的注解
+     */
     int insert(CodegenTestModel record);
 
     /**
@@ -34,10 +39,25 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
+    CodegenTestModel selectByPrimaryKey(Integer id);
+
+    /**
+     * @mbg.generated eclipse插件识别是否覆盖的注解
+     */
     int updateByExampleSelective(@Param("record") CodegenTestModel record, @Param("example") CodegenTestModelExample example);
 
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     int updateByExample(@Param("record") CodegenTestModel record, @Param("example") CodegenTestModelExample example);
+
+    /**
+     * @mbg.generated eclipse插件识别是否覆盖的注解
+     */
+    int updateByPrimaryKeySelective(CodegenTestModel record);
+
+    /**
+     * @mbg.generated eclipse插件识别是否覆盖的注解
+     */
+    int updateByPrimaryKey(CodegenTestModel record);
 }
