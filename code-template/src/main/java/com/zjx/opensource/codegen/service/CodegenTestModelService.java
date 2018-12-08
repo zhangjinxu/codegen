@@ -10,7 +10,7 @@ public interface CodegenTestModelService {
 
     void addSelective(CodegenTestModel codegenTestModel);
 
-    void updateSelectiveById(CodegenTestModel codegenTestModel);
+    void updateByIdSelective(CodegenTestModel codegenTestModel);
 
     void deleteById(Integer id);
 

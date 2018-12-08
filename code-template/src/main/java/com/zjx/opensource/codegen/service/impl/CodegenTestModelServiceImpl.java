@@ -1,7 +1,6 @@
 package com.zjx.opensource.codegen.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.zjx.opensource.codegen.exception.ServiceException;
 import com.zjx.opensource.codegen.mapper.CodegenTestModelMapper;
 import com.zjx.opensource.codegen.model.CodegenTestModel;
 import com.zjx.opensource.codegen.model.CodegenTestModelExample;
@@ -38,7 +37,7 @@ public class CodegenTestModelServiceImpl implements CodegenTestModelService {
     }
 
     @Override
-    public void updateSelectiveById(CodegenTestModel codegenTestModel) {
+    public void updateByIdSelective(CodegenTestModel codegenTestModel) {
         if (codegenTestModel != null && codegenTestModel.getId() != null) {
             codegenTestModelMapper.updateByPrimaryKeySelective(codegenTestModel);
         }

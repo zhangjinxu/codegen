@@ -10,7 +10,7 @@
 
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
 
-        <commentGenerator type="com.zjx.opensource.codegen.mbg.CodegenCommentGenerator">
+        <commentGenerator type="com.zjx.opensource.codegen.mbg.comment.CodegenCommentGenerator">
             <!--eclipse插件使用@mbggenerated保证再次生成的代码不会覆盖自己定义的代码-->
             <property name="suppressAllComments" value="false"/>
             <property name="suppressDate" value="true"/>
