@@ -32,7 +32,7 @@
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codetemplate.mapper"  targetProject="code-template\src\main\java"/>
 
-        <table tableName="code_gen_test">
+        <table tableName="codegen_test_model">
             <generatedKey identity="true" column="id" sqlStatement="Mysql"/>
         </table>
     </context>

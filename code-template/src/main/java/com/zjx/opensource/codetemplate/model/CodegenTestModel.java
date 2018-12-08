@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 /**
  *
- * 对应数据库表: code_gen_test
+ * 对应数据库表: codegen_test_model
  */
-public class CodeGenTest implements Serializable {
+public class CodegenTestModel implements Serializable {
     /**
      *
-     * 对应数据库表字段: code_gen_test.id
+     * 对应数据库表字段: codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     private Integer id;
@@ -17,7 +17,7 @@ public class CodeGenTest implements Serializable {
     /**
      *   用户名
      *
-     * 对应数据库表字段: code_gen_test.username
+     * 对应数据库表字段: codegen_test_model.username
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     private String username;
@@ -25,7 +25,7 @@ public class CodeGenTest implements Serializable {
     /**
      *   密码
      *
-     * 对应数据库表字段: code_gen_test.password
+     * 对应数据库表字段: codegen_test_model.password
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     private String password;
@@ -33,7 +33,7 @@ public class CodeGenTest implements Serializable {
     /**
      *   用户类型
      *
-     * 对应数据库表字段: code_gen_test.type
+     * 对应数据库表字段: codegen_test_model.type
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     private String type;
@@ -44,9 +44,9 @@ public class CodeGenTest implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
-     * 返回值对应数据库表字段:  code_gen_test.id
+     * 返回值对应数据库表字段:  codegen_test_model.id
      *
-     * @return  code_gen_test.id
+     * @return  codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public Integer getId() {
@@ -54,9 +54,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 给对应数据库表字段设值：  code_gen_test.id
+     * 给对应数据库表字段设值：  codegen_test_model.id
      *
-     * @param id 对应数据库表字段:  code_gen_test.id
+     * @param id 对应数据库表字段:  codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public void setId(Integer id) {
@@ -64,9 +64,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 返回值对应数据库表字段:  code_gen_test.username
+     * 返回值对应数据库表字段:  codegen_test_model.username
      *
-     * @return  code_gen_test.username
+     * @return  codegen_test_model.username
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public String getUsername() {
@@ -74,9 +74,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 给对应数据库表字段设值：  code_gen_test.username
+     * 给对应数据库表字段设值：  codegen_test_model.username
      *
-     * @param username 对应数据库表字段:  code_gen_test.username
+     * @param username 对应数据库表字段:  codegen_test_model.username
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public void setUsername(String username) {
@@ -84,9 +84,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 返回值对应数据库表字段:  code_gen_test.password
+     * 返回值对应数据库表字段:  codegen_test_model.password
      *
-     * @return  code_gen_test.password
+     * @return  codegen_test_model.password
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public String getPassword() {
@@ -94,9 +94,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 给对应数据库表字段设值：  code_gen_test.password
+     * 给对应数据库表字段设值：  codegen_test_model.password
      *
-     * @param password 对应数据库表字段:  code_gen_test.password
+     * @param password 对应数据库表字段:  codegen_test_model.password
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public void setPassword(String password) {
@@ -104,9 +104,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 返回值对应数据库表字段:  code_gen_test.type
+     * 返回值对应数据库表字段:  codegen_test_model.type
      *
-     * @return  code_gen_test.type
+     * @return  codegen_test_model.type
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public String getType() {
@@ -114,9 +114,9 @@ public class CodeGenTest implements Serializable {
     }
 
     /**
-     * 给对应数据库表字段设值：  code_gen_test.type
+     * 给对应数据库表字段设值：  codegen_test_model.type
      *
-     * @param type 对应数据库表字段:  code_gen_test.type
+     * @param type 对应数据库表字段:  codegen_test_model.type
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public void setType(String type) {

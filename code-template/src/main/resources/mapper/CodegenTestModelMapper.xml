@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.zjx.opensource.codetemplate.mapper.CodeGenTestMapper">
-  <resultMap id="BaseResultMap" type="com.zjx.opensource.codetemplate.model.CodeGenTest">
+<mapper namespace="com.zjx.opensource.codetemplate.mapper.CodegenTestModelMapper">
+  <resultMap id="BaseResultMap" type="com.zjx.opensource.codetemplate.model.CodegenTestModel">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
@@ -80,7 +80,7 @@
     -->
     id, username, password, type
   </sql>
-  <select id="selectByExample" parameterType="com.zjx.opensource.codetemplate.model.CodeGenTestExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModelExample" resultMap="BaseResultMap">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
@@ -89,7 +89,7 @@
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from code_gen_test
+    from codegen_test_model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -97,35 +97,35 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.zjx.opensource.codetemplate.model.CodeGenTestExample">
+  <delete id="deleteByExample" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModelExample">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    delete from code_gen_test
+    delete from codegen_test_model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.zjx.opensource.codetemplate.model.CodeGenTest">
+  <insert id="insert" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModel">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into code_gen_test (username, password, type
+    insert into codegen_test_model (username, password, type
       )
     values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.zjx.opensource.codetemplate.model.CodeGenTest">
+  <insert id="insertSelective" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModel">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into code_gen_test
+    insert into codegen_test_model
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="username != null">
         username,
@@ -149,11 +149,11 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.zjx.opensource.codetemplate.model.CodeGenTestExample" resultType="java.lang.Long">
+  <select id="countByExample" parameterType="com.zjx.opensource.codetemplate.model.CodegenTestModelExample" resultType="java.lang.Long">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    select count(*) from code_gen_test
+    select count(*) from codegen_test_model
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -162,7 +162,7 @@
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    update code_gen_test
+    update codegen_test_model
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
@@ -185,7 +185,7 @@
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    update code_gen_test
+    update codegen_test_model
     set id = #{record.id,jdbcType=INTEGER},
       username = #{record.username,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},

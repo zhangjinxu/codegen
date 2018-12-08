@@ -3,7 +3,7 @@ package com.zjx.opensource.codetemplate.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CodeGenTestExample {
+public class CodegenTestModelExample {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
@@ -22,7 +22,7 @@ public class CodeGenTestExample {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    public CodeGenTestExample() {
+    public CodegenTestModelExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -106,7 +106,7 @@ public class CodeGenTestExample {
     }
 
     /**
-     * 对应数据库表：  code_gen_test
+     * 对应数据库表：  codegen_test_model
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     protected abstract static class GeneratedCriteria {
@@ -422,7 +422,7 @@ public class CodeGenTestExample {
     }
 
     /**
-     * 对应数据库表： code_gen_test
+     * 对应数据库表： codegen_test_model
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public static class Criteria extends GeneratedCriteria {
@@ -433,7 +433,7 @@ public class CodeGenTestExample {
     }
 
     /**
-     * 对应数据库表：  code_gen_test
+     * 对应数据库表：  codegen_test_model
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
     public static class Criterion {
