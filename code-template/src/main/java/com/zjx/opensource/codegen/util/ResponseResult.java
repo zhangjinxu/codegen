@@ -30,6 +30,10 @@ public class ResponseResult implements Serializable {
         return new ResponseResult(100, "param error", "");
     }
 
+    public static ResponseResult getParamErrorResult(String errorMsg) {
+        return new ResponseResult(100, errorMsg, "");
+    }
+
     private ResponseResult(int code, String msg, Object data) {
         this.code = code;
         this.msg = msg;

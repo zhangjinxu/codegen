@@ -3,6 +3,8 @@ package com.zjx.opensource.codegen.controller;
 import com.zjx.opensource.codegen.model.CodegenTestModel;
 import com.zjx.opensource.codegen.service.CodegenTestModelService;
 import com.zjx.opensource.codegen.util.ResponseResult;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +12,8 @@ import java.util.List;
 
 @RestController
 public class CodegenTestModelController {
+
+    private static final Logger logger = LoggerFactory.getLogger(CodegenTestModelController.class);
 
     @Autowired
     private CodegenTestModelService codegenTestModelService;
