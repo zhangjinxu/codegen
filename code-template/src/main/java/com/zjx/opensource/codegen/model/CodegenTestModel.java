@@ -123,22 +123,11 @@ public class CodegenTestModel implements Serializable {
         this.type = type;
     }
 
-
+    /** 
+    * @mbg.generated
+    */
     public CodegenTestModelExample toExample() {
-        CodegenTestModelExample example = new CodegenTestModelExample();
-        CodegenTestModelExample.Criteria criteria = example.createCriteria();
-        if (getId() != null) {
-            criteria.andIdEqualTo(getId());
-        }
-        if (getPassword() != null) {
-            criteria.andPasswordEqualTo(getPassword());
-        }
-        if (getType() != null) {
-            criteria.andTypeEqualTo(getType());
-        }
-        if (getUsername() != null) {
-            criteria.andUsernameEqualTo(getUsername());
-        }
-        return example;
+        int i = 0;
+        return null;
     }
 }

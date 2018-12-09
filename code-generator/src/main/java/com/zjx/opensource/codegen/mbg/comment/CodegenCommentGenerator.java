@@ -20,7 +20,7 @@ import java.util.Set;
 
 import static org.mybatis.generator.internal.util.StringUtility.isTrue;
 
-public class CodegenCommentGenerator implements CommentGenerator {
+public class CodegenCommentGenerator implements org.mybatis.generator.api.CommentGenerator {
     private Properties properties;
 
     private boolean suppressDate;
