@@ -130,4 +130,6 @@ public class CodegenTestModel implements Serializable {
         int i = 0;
         return null;
     }
+
+    public enum A {a}
 }
