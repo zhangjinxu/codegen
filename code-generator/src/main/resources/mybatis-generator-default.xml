@@ -26,15 +26,15 @@
             <property name="useInformationSchema" value="true"/>
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.zjx.opensource.codegen.model" targetProject="code-template\src\main\java">
+        <javaModelGenerator targetPackage="com.zjx.opensource.codegen.model" targetProject="code-template/src/main/java">
             <property name="trimStrings" value="false" />
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="mapper"  targetProject="code-template\src\main\resources"/>
+        <sqlMapGenerator targetPackage="mapper"  targetProject="code-template/src/main/resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codegen.mapper" targetProject="code-template\src\main\java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codegen.mapper" targetProject="code-template/src/main/java"/>
 
-        <table tableName="codegen_test_model">
+        <table tableName="project">
             <generatedKey identity="true" column="id" sqlStatement="Mysql"/>
         </table>
     </context>

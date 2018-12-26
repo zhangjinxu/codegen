@@ -123,13 +123,5 @@ public class CodegenTestModel implements Serializable {
         this.type = type;
     }
 
-    /** 
-    * @mbg.generated
-    */
-    public CodegenTestModelExample toExample() {
-        int i = 0;
-        return null;
-    }
 
-    public enum A {a}
 }

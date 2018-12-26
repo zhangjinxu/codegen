@@ -35,7 +35,7 @@ public class CodegenTestModelController {
         if (model == null || model.getId() == null) {
             return ResponseResult.getParamErrorResult();
         }
-        codegenTestModelService.updateSelectiveById(model);
+        codegenTestModelService.updateByIdSelective(model);
         return ResponseResult.getSuccessResult();
     }
 
