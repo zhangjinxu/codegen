@@ -123,5 +123,7 @@ public class CodegenTestModel implements Serializable {
         this.type = type;
     }
 
-
+    public CodegenTestModelExample toExample() {
+        return null;
+    }
 }

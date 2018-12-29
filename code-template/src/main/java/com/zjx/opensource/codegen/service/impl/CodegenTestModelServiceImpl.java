@@ -1,9 +1,9 @@
 package com.zjx.opensource.codegen.service.impl;
 
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.zjx.opensource.codegen.mapper.CodegenTestModelMapper;
 import com.zjx.opensource.codegen.model.CodegenTestModel;
-import com.zjx.opensource.codegen.model.CodegenTestModelExample;
 import com.zjx.opensource.codegen.service.CodegenTestModelService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +11,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -32,7 +31,7 @@ public class CodegenTestModelServiceImpl implements CodegenTestModelService {
     }
 
     @Override
-    public void addSelective(CodegenTestModel codegenTestModel) {
+    public void insertSelective(CodegenTestModel codegenTestModel) {
         codegenTestModelMapper.insertSelective(codegenTestModel);
     }
 
@@ -51,15 +50,12 @@ public class CodegenTestModelServiceImpl implements CodegenTestModelService {
     }
 
     @Override
-    public List<CodegenTestModel> listCodegenTestModels(int pageNum, CodegenTestModel model) {
-        if (pageNum <= 0) {
-            return new ArrayList<>(0);
-        }
-        PageHelper.startPage(pageNum, 10);
-        if (model == null) {
-            return codegenTestModelMapper.selectByExample(new CodegenTestModelExample());
-        }
-        return codegenTestModelMapper.selectByExample(model.toExample());
+    public PageInfo<CodegenTestModel> listCodegenTestModels(int pageNum, int pageSize, CodegenTestModel model) {
+        PageHelper.startPage(pageNum, pageSize);
+        List<CodegenTestModel> models = codegenTestModelMapper.selectByExample(model.toExample());
+        PageInfo<CodegenTestModel> pageInfo = new PageInfo<>(models);
+        return pageInfo;
     }
+
 
 }

@@ -9,7 +9,8 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
-        <plugin type="com.zjx.opensource.codegen.mbg.plugin.CodegenModelToExamplePlugin" />
+        <plugin type="com.zjx.opensource.codegen.mbg.plugin.ModelToExamplePlugin" />
+        <plugin type="com.zjx.opensource.codegen.mbg.plugin.CodegenPlugin" />
 
         <commentGenerator type="com.zjx.opensource.codegen.mbg.comment.CodegenCommentGenerator">
             <!--eclipse插件使用@mbggenerated保证再次生成的代码不会覆盖自己定义的代码-->
@@ -34,7 +35,7 @@
 
         <javaClientGenerator type="XMLMAPPER" targetPackage="com.zjx.opensource.codegen.mapper" targetProject="code-template/src/main/java"/>
 
-        <table tableName="project">
+        <table tableName="codegen_test_model">
             <generatedKey identity="true" column="id" sqlStatement="Mysql"/>
         </table>
     </context>

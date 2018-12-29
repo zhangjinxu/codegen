@@ -1,5 +1,7 @@
 package com.zjx.opensource.codegen.controller;
 
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageInfo;
 import com.zjx.opensource.codegen.model.CodegenTestModel;
 import com.zjx.opensource.codegen.service.CodegenTestModelService;
 import com.zjx.opensource.codegen.util.ResponseResult;
@@ -25,9 +27,9 @@ public class CodegenTestModelController {
     }
 
     @RequestMapping(value = "/codegenTestModels",method = RequestMethod.GET)
-    public ResponseResult getModels(@RequestParam(defaultValue = "1") int pageNum, CodegenTestModel model) {
-        List<CodegenTestModel> models = codegenTestModelService.listCodegenTestModels(pageNum, model);
-        return ResponseResult.getSuccessResult(models);
+    public ResponseResult getModels(@RequestParam(defaultValue = "1") int pageNum,@RequestParam(defaultValue = "10")int pageSize, CodegenTestModel model) {
+        PageInfo<CodegenTestModel> page = codegenTestModelService.listCodegenTestModels(pageNum,pageSize, model);
+        return ResponseResult.getSuccessResult(page);
     }
 
     @RequestMapping(value="/codegenTestModel",method = RequestMethod.PUT)
@@ -44,7 +46,7 @@ public class CodegenTestModelController {
         if (model == null || model.getId() != null) {
             return ResponseResult.getParamErrorResult();
         }
-        codegenTestModelService.addSelective(model);
+        codegenTestModelService.insertSelective(model);
         return ResponseResult.getSuccessResult();
     }
 

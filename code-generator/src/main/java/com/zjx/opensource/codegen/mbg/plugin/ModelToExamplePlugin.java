@@ -7,7 +7,7 @@ import org.mybatis.generator.config.MergeConstants;
 
 import java.util.List;
 
-public class CodegenModelToExamplePlugin extends PluginAdapter {
+public class ModelToExamplePlugin extends PluginAdapter {
     @Override
     public boolean validate(List<String> warnings) {
         return true;
