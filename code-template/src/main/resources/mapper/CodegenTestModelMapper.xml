@@ -5,10 +5,10 @@
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="id" jdbcType="BIGINT" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="type" jdbcType="CHAR" property="type" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
@@ -97,21 +97,21 @@
       order by ${orderByClause}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
     select 
     <include refid="Base_Column_List" />
     from codegen_test_model
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
     delete from codegen_test_model
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.zjx.opensource.codegen.model.CodegenTestModelExample">
     <!--
@@ -126,19 +126,19 @@
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into codegen_test_model (username, password, type
       )
-    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{type,jdbcType=CHAR}
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}
       )
   </insert>
   <insert id="insertSelective" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
-    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
     </selectKey>
     insert into codegen_test_model
@@ -161,7 +161,7 @@
         #{password,jdbcType=VARCHAR},
       </if>
       <if test="type != null">
-        #{type,jdbcType=CHAR},
+        #{type,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -181,7 +181,7 @@
     update codegen_test_model
     <set>
       <if test="record.id != null">
-        id = #{record.id,jdbcType=INTEGER},
+        id = #{record.id,jdbcType=BIGINT},
       </if>
       <if test="record.username != null">
         username = #{record.username,jdbcType=VARCHAR},
@@ -190,7 +190,7 @@
         password = #{record.password,jdbcType=VARCHAR},
       </if>
       <if test="record.type != null">
-        type = #{record.type,jdbcType=CHAR},
+        type = #{record.type,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -202,10 +202,10 @@
     @mbg.generated eclipse插件识别是否覆盖的注解 
     -->
     update codegen_test_model
-    set id = #{record.id,jdbcType=INTEGER},
+    set id = #{record.id,jdbcType=BIGINT},
       username = #{record.username,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
-      type = #{record.type,jdbcType=CHAR}
+      type = #{record.type,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -223,10 +223,10 @@
         password = #{password,jdbcType=VARCHAR},
       </if>
       <if test="type != null">
-        type = #{type,jdbcType=CHAR},
+        type = #{type,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=INTEGER}
+    where id = #{id,jdbcType=BIGINT}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
@@ -235,7 +235,7 @@
     update codegen_test_model
     set username = #{username,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
-      type = #{type,jdbcType=CHAR}
-    where id = #{id,jdbcType=INTEGER}
+      type = #{type,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
   </update>
 </mapper>

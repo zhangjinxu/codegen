@@ -1,6 +1,8 @@
 package com.zjx.opensource.codegen.model;
 
+import com.zjx.opensource.codegen.exception.ServiceException;
 import java.io.Serializable;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -12,10 +14,9 @@ public class CodegenTestModel implements Serializable {
      * 对应数据库表字段: codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    private Integer id;
+    private Long id;
 
     /**
-     *   用户名
      *
      * 对应数据库表字段: codegen_test_model.username
      * @mbg.generated eclipse插件识别是否覆盖的注解
@@ -23,7 +24,6 @@ public class CodegenTestModel implements Serializable {
     private String username;
 
     /**
-     *   密码
      *
      * 对应数据库表字段: codegen_test_model.password
      * @mbg.generated eclipse插件识别是否覆盖的注解
@@ -31,7 +31,6 @@ public class CodegenTestModel implements Serializable {
     private String password;
 
     /**
-     *   用户类型
      *
      * 对应数据库表字段: codegen_test_model.type
      * @mbg.generated eclipse插件识别是否覆盖的注解
@@ -44,12 +43,18 @@ public class CodegenTestModel implements Serializable {
     private static final long serialVersionUID = 1L;
 
     /**
+    * djoejrgohtkmnjefgrhkltmnjbhr
+    */
+    @NotNull
+    private static CodegenTestModel model;
+
+    /**
      * 返回值对应数据库表字段:  codegen_test_model.id
      *
      * @return  codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
@@ -59,7 +64,7 @@ public class CodegenTestModel implements Serializable {
      * @param id 对应数据库表字段:  codegen_test_model.id
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -123,7 +128,60 @@ public class CodegenTestModel implements Serializable {
         this.type = type;
     }
 
+    /** 
+    * 将model类中的非null字段转化为Example中的条件
+    * @mbg.generated
+    */
     public CodegenTestModelExample toExample() {
-        return null;
+        CodegenTestModelExample example = new CodegenTestModelExample();
+        CodegenTestModelExample.Criteria criteria = example.createCriteria();
+        if (id != null) {
+            criteria.andIdEqualTo(id);
+        }
+        if (username != null) {
+            criteria.andUsernameEqualTo(username);
+        }
+        if (password != null) {
+            criteria.andPasswordEqualTo(password);
+        }
+        if (type != null) {
+            criteria.andTypeEqualTo(type);
+        }
+        return example;
+    }
+
+    /**
+    * dfjgrothngkl;fskdgd
+    */
+    @NotNull
+    public CodegenTestModel() {
+        
+    }
+
+    public CodegenTestModel( Long id) {
+        this.id = id;
+    }
+
+    /**
+    * 将model类中的非null字段转化为Example中的条件
+    */
+    @NotNull
+    public ServiceException toExample123(@NotNull String aaa) throws Exception {
+        
+        CodegenTestModelExample example = new CodegenTestModelExample();
+        CodegenTestModelExample.Criteria criteria = example.createCriteria();
+        if (id != null) {
+            criteria.andIdEqualTo(id);
+        }
+        if (username != null) {
+            criteria.andUsernameEqualTo(username);
+        }
+        if (password != null) {
+            criteria.andPasswordEqualTo(password);
+        }
+        if (type != null) {
+            criteria.andTypeEqualTo(type);
+        }
+        return new ServiceException();
     }
 }

@@ -1,6 +1,5 @@
 package com.zjx.opensource.codegen.controller;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.zjx.opensource.codegen.model.CodegenTestModel;
 import com.zjx.opensource.codegen.service.CodegenTestModelService;
@@ -9,8 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class CodegenTestModelController {

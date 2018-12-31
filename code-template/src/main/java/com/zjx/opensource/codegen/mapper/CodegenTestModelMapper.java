@@ -19,7 +19,7 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Long id);
 
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
@@ -39,7 +39,7 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
      */
-    CodegenTestModel selectByPrimaryKey(Integer id);
+    CodegenTestModel selectByPrimaryKey(Long id);
 
     /**
      * @mbg.generated eclipse插件识别是否覆盖的注解
