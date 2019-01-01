@@ -7,57 +7,57 @@ import org.apache.ibatis.annotations.Param;
 
 public interface CodegenTestModelMapper {
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     long countByExample(CodegenTestModelExample example);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int deleteByExample(CodegenTestModelExample example);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int deleteByPrimaryKey(Long id);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int insert(CodegenTestModel record);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int insertSelective(CodegenTestModel record);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     List<CodegenTestModel> selectByExample(CodegenTestModelExample example);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     CodegenTestModel selectByPrimaryKey(Long id);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int updateByExampleSelective(@Param("record") CodegenTestModel record, @Param("example") CodegenTestModelExample example);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int updateByExample(@Param("record") CodegenTestModel record, @Param("example") CodegenTestModelExample example);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int updateByPrimaryKeySelective(CodegenTestModel record);
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     int updateByPrimaryKey(CodegenTestModel record);
 }

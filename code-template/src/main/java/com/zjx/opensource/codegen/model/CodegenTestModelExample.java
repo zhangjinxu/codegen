@@ -5,71 +5,71 @@ import java.util.List;
 
 public class CodegenTestModelExample {
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     protected String orderByClause;
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     protected boolean distinct;
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     protected List<Criteria> oredCriteria;
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public CodegenTestModelExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public void setOrderByClause(String orderByClause) {
         this.orderByClause = orderByClause;
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public String getOrderByClause() {
         return orderByClause;
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public void setDistinct(boolean distinct) {
         this.distinct = distinct;
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public boolean isDistinct() {
         return distinct;
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public List<Criteria> getOredCriteria() {
         return oredCriteria;
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public void or(Criteria criteria) {
         oredCriteria.add(criteria);
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public Criteria or() {
         Criteria criteria = createCriteriaInternal();
@@ -78,7 +78,7 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public Criteria createCriteria() {
         Criteria criteria = createCriteriaInternal();
@@ -89,7 +89,7 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     protected Criteria createCriteriaInternal() {
         Criteria criteria = new Criteria();
@@ -97,7 +97,7 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public void clear() {
         oredCriteria.clear();
@@ -106,8 +106,8 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * 对应数据库表：  codegen_test_model
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应表:codegen_test_model
+     * @mbg.generated
      */
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
@@ -422,8 +422,8 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * 对应数据库表： codegen_test_model
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应表：codegen_test_model
+     * @mbg.generated识别是否可以覆盖的注解
      */
     public static class Criteria extends GeneratedCriteria {
 
@@ -433,8 +433,8 @@ public class CodegenTestModelExample {
     }
 
     /**
-     * 对应数据库表：  codegen_test_model
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应表:codegen_test_model
+     * @mbg.generated
      */
     public static class Criterion {
         private String condition;

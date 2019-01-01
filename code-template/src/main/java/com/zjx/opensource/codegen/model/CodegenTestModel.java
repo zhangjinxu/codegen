@@ -6,39 +6,39 @@ import javax.validation.constraints.NotNull;
 
 /**
  *
- * 对应数据库表: codegen_test_model
+ * 对应表: codegen_test_model
  */
 public class CodegenTestModel implements Serializable {
     /**
      *
-     * 对应数据库表字段: codegen_test_model.id
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.id
+     * @mbg.generated
      */
     private Long id;
 
     /**
      *
-     * 对应数据库表字段: codegen_test_model.username
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.username
+     * @mbg.generated
      */
     private String username;
 
     /**
      *
-     * 对应数据库表字段: codegen_test_model.password
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.password
+     * @mbg.generated
      */
     private String password;
 
     /**
      *
-     * 对应数据库表字段: codegen_test_model.type
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.type
+     * @mbg.generated
      */
     private String type;
 
     /**
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     private static final long serialVersionUID = 1L;
 
@@ -49,80 +49,68 @@ public class CodegenTestModel implements Serializable {
     private static CodegenTestModel model;
 
     /**
-     * 返回值对应数据库表字段:  codegen_test_model.id
+     * 对应字段: codegen_test_model.id
      *
-     * @return  codegen_test_model.id
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public Long getId() {
         return id;
     }
 
     /**
-     * 给对应数据库表字段设值：  codegen_test_model.id
-     *
-     * @param id 对应数据库表字段:  codegen_test_model.id
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.id
+     * @mbg.generated
      */
     public void setId(Long id) {
         this.id = id;
     }
 
     /**
-     * 返回值对应数据库表字段:  codegen_test_model.username
+     * 对应字段: codegen_test_model.username
      *
-     * @return  codegen_test_model.username
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public String getUsername() {
         return username;
     }
 
     /**
-     * 给对应数据库表字段设值：  codegen_test_model.username
-     *
-     * @param username 对应数据库表字段:  codegen_test_model.username
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.username
+     * @mbg.generated
      */
     public void setUsername(String username) {
         this.username = username;
     }
 
     /**
-     * 返回值对应数据库表字段:  codegen_test_model.password
+     * 对应字段: codegen_test_model.password
      *
-     * @return  codegen_test_model.password
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public String getPassword() {
         return password;
     }
 
     /**
-     * 给对应数据库表字段设值：  codegen_test_model.password
-     *
-     * @param password 对应数据库表字段:  codegen_test_model.password
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.password
+     * @mbg.generated
      */
     public void setPassword(String password) {
         this.password = password;
     }
 
     /**
-     * 返回值对应数据库表字段:  codegen_test_model.type
+     * 对应字段: codegen_test_model.type
      *
-     * @return  codegen_test_model.type
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * @mbg.generated
      */
     public String getType() {
         return type;
     }
 
     /**
-     * 给对应数据库表字段设值：  codegen_test_model.type
-     *
-     * @param type 对应数据库表字段:  codegen_test_model.type
-     * @mbg.generated eclipse插件识别是否覆盖的注解
+     * 对应字段: codegen_test_model.type
+     * @mbg.generated
      */
     public void setType(String type) {
         this.type = type;

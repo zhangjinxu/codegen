@@ -3,7 +3,7 @@
 <mapper namespace="com.zjx.opensource.codegen.mapper.CodegenTestModelMapper">
   <resultMap id="BaseResultMap" type="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
@@ -12,7 +12,7 @@
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     <where>
       <foreach collection="oredCriteria" item="criteria" separator="or">
@@ -44,7 +44,7 @@
   </sql>
   <sql id="Update_By_Example_Where_Clause">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     <where>
       <foreach collection="example.oredCriteria" item="criteria" separator="or">
@@ -76,13 +76,13 @@
   </sql>
   <sql id="Base_Column_List">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     id, username, password, type
   </sql>
   <select id="selectByExample" parameterType="com.zjx.opensource.codegen.model.CodegenTestModelExample" resultMap="BaseResultMap">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     select
     <if test="distinct">
@@ -99,7 +99,7 @@
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     select 
     <include refid="Base_Column_List" />
@@ -108,14 +108,14 @@
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     delete from codegen_test_model
     where id = #{id,jdbcType=BIGINT}
   </delete>
   <delete id="deleteByExample" parameterType="com.zjx.opensource.codegen.model.CodegenTestModelExample">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     delete from codegen_test_model
     <if test="_parameter != null">
@@ -124,7 +124,7 @@
   </delete>
   <insert id="insert" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
@@ -136,7 +136,7 @@
   </insert>
   <insert id="insertSelective" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
       SELECT LAST_INSERT_ID()
@@ -167,7 +167,7 @@
   </insert>
   <select id="countByExample" parameterType="com.zjx.opensource.codegen.model.CodegenTestModelExample" resultType="java.lang.Long">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     select count(*) from codegen_test_model
     <if test="_parameter != null">
@@ -176,7 +176,7 @@
   </select>
   <update id="updateByExampleSelective" parameterType="map">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     update codegen_test_model
     <set>
@@ -199,7 +199,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     update codegen_test_model
     set id = #{record.id,jdbcType=BIGINT},
@@ -212,7 +212,7 @@
   </update>
   <update id="updateByPrimaryKeySelective" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     update codegen_test_model
     <set>
@@ -230,7 +230,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="com.zjx.opensource.codegen.model.CodegenTestModel">
     <!--
-    @mbg.generated eclipse插件识别是否覆盖的注解 
+    @mbg.generated
     -->
     update codegen_test_model
     set username = #{username,jdbcType=VARCHAR},
