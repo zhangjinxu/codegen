@@ -14,7 +14,7 @@ public class CodegenTestModel implements Serializable {
      * 对应字段: codegen_test_model.id
      * @mbg.generated
      */
-    private Long id;
+    private Integer id;
 
     /**
      *
@@ -53,7 +53,7 @@ public class CodegenTestModel implements Serializable {
      *
      * @mbg.generated
      */
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -61,7 +61,7 @@ public class CodegenTestModel implements Serializable {
      * 对应字段: codegen_test_model.id
      * @mbg.generated
      */
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

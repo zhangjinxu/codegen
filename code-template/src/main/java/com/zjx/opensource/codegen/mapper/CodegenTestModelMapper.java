@@ -19,7 +19,7 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated
      */
-    int deleteByPrimaryKey(Long id);
+    int deleteByPrimaryKey(Integer id);
 
     /**
      * @mbg.generated
@@ -39,7 +39,7 @@ public interface CodegenTestModelMapper {
     /**
      * @mbg.generated
      */
-    CodegenTestModel selectByPrimaryKey(Long id);
+    CodegenTestModel selectByPrimaryKey(Integer id);
 
     /**
      * @mbg.generated

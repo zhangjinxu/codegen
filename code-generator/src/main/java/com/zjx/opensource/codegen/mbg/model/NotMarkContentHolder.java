@@ -1,10 +1,4 @@
-package com.zjx.opensource.codegen.util;
-import com.github.javaparser.ast.comments.JavadocComment;
-import com.github.javaparser.ast.nodeTypes.NodeWithJavadoc;
-import com.github.javaparser.ast.stmt.BlockStmt;
-import com.github.javaparser.ast.stmt.Statement;
-import org.mybatis.generator.api.dom.java.JavaVisibility;
-import org.mybatis.generator.api.dom.java.FullyQualifiedJavaType;
+package com.zjx.opensource.codegen.mbg.model;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
@@ -14,6 +8,9 @@ import com.github.javaparser.ast.NodeList;
 import com.github.javaparser.ast.body.*;
 import com.github.javaparser.ast.body.Parameter;
 import com.github.javaparser.ast.expr.AnnotationExpr;
+import com.github.javaparser.ast.nodeTypes.NodeWithJavadoc;
+import com.github.javaparser.ast.stmt.BlockStmt;
+import com.github.javaparser.ast.stmt.Statement;
 import com.github.javaparser.ast.type.ReferenceType;
 import org.mybatis.generator.api.dom.java.*;
 import org.mybatis.generator.config.MergeConstants;

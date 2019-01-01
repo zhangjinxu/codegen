@@ -14,7 +14,12 @@
             <property name="backup" value="false"/>
             <property name="backupDirectory" value="/Users/zhangjinxu/Desktop/"/>
         </plugin>
-        <plugin type="com.zjx.opensource.codegen.mbg.plugin.CodegenPlugin" />
+        <plugin type="com.zjx.opensource.codegen.mbg.plugin.CodegenPlugin">
+            <property name="serviceTargetProject" value="code-template/src/main/java"/>
+            <property name="serviceTargetPackage" value="com.zjx.opensource.codegen.service"/>
+            <property name="controllerTargetProject" value="code-template/src/main/java"/>
+            <property name="controllerTargetPackage" value="com.zjx.opensource.codegen.controller"/>
+        </plugin>
 
 
         <commentGenerator type="com.zjx.opensource.codegen.mbg.comment.CodegenCommentGenerator">

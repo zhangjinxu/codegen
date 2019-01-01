@@ -1,6 +1,6 @@
 package com.zjx.opensource.codegen.mbg.plugin;
 
-import com.zjx.opensource.codegen.util.NotMarkContentHolder;
+import com.zjx.opensource.codegen.mbg.model.NotMarkContentHolder;
 import com.zjx.opensource.codegen.util.Util;
 import org.apache.commons.io.IOUtils;
 import org.mybatis.generator.api.IntrospectedTable;
